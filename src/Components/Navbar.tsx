@@ -14,11 +14,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="text-white font-semibold text-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-              Shorten URL App
+            URL Shorten App
             </Link>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-baseline space-x-6">
               <Link
                 to="/"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
@@ -40,7 +40,6 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            {/* Add any additional links or components here */}
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
