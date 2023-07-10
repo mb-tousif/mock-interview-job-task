@@ -8,6 +8,8 @@ const EditPage: React.FC = () => {
 
   const handleDelete = (id: string) => {
     deleteUrl(id);
+    console.log(id);
+    
   };
 
   const handleLongUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +33,6 @@ const EditPage: React.FC = () => {
           <p className="text-lg">Long URL: {url.longUrl}</p>
           <input
             type="text"
-            value={editedLongUrl}
             onBlur={handleLongUrlChange}
             className="border border-gray-300 px-4 py-2 w-full rounded-md mt-4"
           />
