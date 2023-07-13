@@ -22,7 +22,7 @@ const EditPage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto py-8">
+    <div className="max-w-lg mx-auto py-8 min-h-70vh">
       <h2 className="text-2xl font-semibold mb-4">List of Short URLs:</h2>
       {urls.map((url) => (
         <div
@@ -38,13 +38,13 @@ const EditPage: React.FC = () => {
           />
           <button
             onClick={() => handleUpdate(url.id)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-md mt-2"
+            className="bg-[#02393b] text-white font-semibold px-4 py-2 rounded-md mt-2 mr-2"
           >
             Update
           </button>
           <button
             onClick={() => handleDelete(url.id)}
-            className="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-md mt-2"
+            className="bg-[#b11905] text-white font-semibold px-4 py-2 rounded-md mt-2"
           >
             Delete
           </button>

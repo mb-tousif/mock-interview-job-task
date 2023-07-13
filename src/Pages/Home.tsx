@@ -1,39 +1,34 @@
 import React, { useState, useContext } from 'react';
 import UrlContext from '../Context/UrlContext';
 import generateId from '../utils/generateId';
-import { generateUrl } from '../utils/generateShortUrl';
+import { generateUrl } from '../utils/generateUrl';
 
 const EntryPage: React.FC = () => {
   const { addUrl } = useContext(UrlContext);
   const [formData, setFormData] = useState({ id:"", longUrl: '', shortUrl: '' });
 
   const handleUrlShorten = () => {
-    // Generate short URL
     const customId = generateId(6);
-    const generatedShortUrl =`http://example.com/${generateId(6)}`
-    const generatedLongUrl = generateUrl(formData.longUrl, 4)
+    const generatedShortUrl = generateUrl(5, formData.longUrl)
     const newUrl = {
       id: customId,
       longUrl: generatedLongUrl,
       shortUrl: generatedShortUrl,
     };
-    // Get the existing URLs from localStorage
     const existingUrls = JSON.parse(localStorage.getItem('urls') || '[]');
-    // Update the URLs array with the new URL
     const updatedUrls = [...existingUrls, newUrl];
-    // Store the updated URLs in localStorage
     localStorage.setItem('urls', JSON.stringify(updatedUrls));
     addUrl(newUrl);
-    // Clear form inputs
     setFormData({ id:customId, longUrl: generatedLongUrl, shortUrl: generatedShortUrl });
   };
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  const generatedLongUrl = generateUrl(15, formData.longUrl)
+  
   return (
-    <div className="max-w-lg mx-auto py-8">
+    <div className="max-w-lg mx-auto py-8 min-h-70vh">
       <input
         type="text"
         placeholder="Enter a long URL"
@@ -43,7 +38,7 @@ const EntryPage: React.FC = () => {
       />
       <button
         onClick={handleUrlShorten}
-        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-md"
+        className="bg-[#046568] hover:bg-[#02393b] text-white font-semibold px-4 py-2 rounded-md"
       >
         Shorten URL
       </button>
@@ -54,7 +49,7 @@ const EntryPage: React.FC = () => {
             href={formData.shortUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline break-all"
+            className="text-[#046568] hover:underline break-all"
           >
             {formData.shortUrl}
           </a>

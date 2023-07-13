@@ -1,46 +1,20 @@
-# Getting Started with Create React App
+## URL Shortening System
+<p>This is a URL shortening system built using React, TypeScript, and React Router. The system allows users to enter a long URL and generate a short URL, which are stored in the browser's localStorage. Users can also edit the long URL or delete a short URL. The system consists of the following pages:</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- <b>Entry page:</b> Allows users to enter a long URL and generate a short URL.
+- <b>Edit page:</b> Allows users to edit the long URL or delete a short URL.
+- <b>List page:</b> Lists all of the short URLs that have been created. Clicking on a short URL opens the corresponding long URL in a new tab.
 
-## Available Scripts
+### Technologies Used
 
-In the project directory, you can run:
+- React
+- TypeScript
+- React Router
 
-### `npm start`
+### Setup and Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Clone the repository.
+- Navigate to the project directory.
+- Run `npm install` to install the dependencies.
+- Run `npm start` to start the development server.
+- Open your browser and visit `http://localhost:3000` to access the application.

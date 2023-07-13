@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 export default function PageNotFound() {
   const navigate = useNavigate();
   return (
-    <div className="text-center p-7 bg-slate-400 h-screen">
+    <div className="text-center p-7 h-screen">
       <div className="my-auto sm:mt-20">
         <h1 className="text-2xl mb-4 text-red-600">
           Oops! We’ve got a problem.

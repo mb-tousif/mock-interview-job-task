@@ -3,3 +3,8 @@ export type TUrl = {
   longUrl?: string;
   shortUrl?: string;
 };
+
+export type TUrlGenerateParams = {
+  longUrl?: string;
+  length: number;
+};
